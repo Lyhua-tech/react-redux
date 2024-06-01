@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .card1, .card2, .card3 {
+    @apply text-white px-6 py-5 text-2xl font-sans font-semibold shadow-md rounded-lg;
+  }
+
+  .card1 {
+    @apply bg-purple-600;
+  }
+
+  .card2 {
+    @apply bg-red-600;
+  }
+
+  .card3 {
+    @apply bg-green-600;
+  }
+}
+
+p {
+  @apply m-0;
+}
