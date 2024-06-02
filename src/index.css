@@ -6,17 +6,26 @@
   .card1, .card2, .card3 {
     @apply text-white px-6 py-5 text-2xl font-sans font-semibold shadow-md rounded-lg;
   }
-
   .card1 {
     @apply bg-purple-600;
   }
-
   .card2 {
     @apply bg-red-600;
   }
-
   .card3 {
     @apply bg-green-600;
+  }
+  .btnAnimal {
+    @apply p-10 bg-neutral-600 font-sans text-white px-14 text-[36px] font-semibold;
+  }
+  .cardContainer {
+    @apply grid gap-3 grid-cols-3 m-5 max-w-[1400px] mx-auto
+  }
+  .cardBox {
+    @apply bg-orange-500 object-cover relative shadow-lg rounded-lg;
+  }
+  .heartLogo {
+    @apply relative
   }
 }
 
