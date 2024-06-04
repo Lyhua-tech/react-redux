@@ -1,22 +1,25 @@
+import { useState } from 'react';
 import React from 'react'
-import AnimalReact from './assets/AnimalReact'
+import ApiPic from './assets/ApiPic';
+import ImageShow from './assets/ImageShow';
+import SearchBar from './assets/SearchBar';
+import searchImages from './api';
 import './index.css';
 
 
-function getRandomAnimal () {
-  const animalArr = ['cow', 'bird', 'horse', 'cat', 'gator', 'dog'];
-  const animalImg = []
-  let path = 'src/svg/'
-  for (let animal of animalArr) {
-    animal = animal.concat('.svg')
-    animalImg.push(path.concat(animal));
-  }
-  return animalImg[Math.floor(Math.random() * animalImg.length)]
-}
+
 const App = () => {
+  const [images, setImages] = useState([])
+  const handleSubmit = async (term) => {
+    const result = await searchImages(term);
+
+    setImages(result);
+  }
   return (
-    <div>
-      <AnimalReact getAnimal={getRandomAnimal}/>
+    <div className='background'>
+      {/* <AnimalReact getAnimal={getRandomAnimal}/> */}
+      <SearchBar onSubmit={handleSubmit} />
+      <ApiPic images={images}/>
     </div>
   )
 }

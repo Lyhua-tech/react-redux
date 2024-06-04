@@ -27,6 +27,12 @@
   .heartLogo {
     @apply relative
   }
+  .background {
+    @apply bg-neutral-500
+  }
+  .searchbox {
+    @apply p-5 py-3
+  }
 }
 
 p {
